@@ -16,10 +16,6 @@ class ShortenedUrlsController < ApplicationController
     @shortened_urls = ShortenedUrl.all
   end
 
-  # GET /shortened_urls/1/edit
-  def edit
-  end
-
   # POST /shortened_urls
   def create
     @shortened_url = ShortenedUrl.new(shortened_url_params)
@@ -29,15 +25,6 @@ class ShortenedUrlsController < ApplicationController
       redirect_to @shortened_url, notice: 'Shortened url was successfully created.'
     else
       render :new
-    end
-  end
-
-  # PATCH/PUT /shortened_urls/1
-  def update
-    if @shortened_url.update(shortened_url_params)
-      redirect_to @shortened_url, notice: 'Shortened url was successfully updated.'
-    else
-      render :edit
     end
   end
 
