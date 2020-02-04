@@ -16,7 +16,6 @@
  */
 
 @import "node_modules/bootstrap/scss/bootstrap";
-@import "custom.css.scss";
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
 body {
