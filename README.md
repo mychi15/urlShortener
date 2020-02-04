@@ -1,24 +1,4 @@
 # README
+URL Shortener is a service that takes long URLs and squeezes them into fewer characters to make a link that is easier to share, tweet, or email to friends. Users can create these short links through the web interface.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Links that users create through the URL Shortener can also open directly in your mobile applications that can handle those links. This automatic behavior provides the best possible experience to users, no matter what platform or device they are on.
