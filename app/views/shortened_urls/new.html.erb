@@ -1,8 +1,6 @@
-<div class="container-fluid">
+<div class="container">
   <h1>New Shortened Url</h1>
 
   <%= render 'form', shortened_url: @shortened_url %>
   <%= render 'index', shortened_url: @shortened_url %>
-
-  <%= link_to 'Back', shortened_urls_path %>
 </div>

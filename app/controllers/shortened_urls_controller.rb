@@ -8,6 +8,7 @@ class ShortenedUrlsController < ApplicationController
 
   # GET /shortened_urls/1
   def show
+    @shortened_url = ShortenedUrl.find_by(shortened_url_params)
   end
 
   # GET /shortened_urls/new
@@ -37,7 +38,7 @@ class ShortenedUrlsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_shortened_url
-      @shortened_url = ShortenedUrl.find(params[:id])
+      @shortened_url = ShortenedUrl.find_by(params[:short_url])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

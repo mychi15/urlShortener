@@ -17,6 +17,24 @@
 
 @import "~bootstrap/scss/bootstrap";
 @import "./_custom";
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
+body {
+  background-color: rgba(110, 138, 158, 0.521);
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 2px;
+}
 
+h1 {
+  color: rgb(31, 41, 78);
+}
 
+.btn-primary {
+  background-color: #3D96E9;
+  border-color: #3D96E9;
+}
+
+.btn-secondary {
+  background-color: #24336A;
+  border-color: #24336A;
+}
