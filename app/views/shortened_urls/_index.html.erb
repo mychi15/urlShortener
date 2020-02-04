@@ -15,8 +15,8 @@
     <% @shortened_urls.each do |shortened_url| %>
       <tr scope="row">
         <td><%= shortened_url.long_url %></td>
-        <td><%= shortened_url.short_url %></td>
-        <td><button class="btn btn-primary btn-sm" id="copy-action">Copy</button></td>
+        <td id="copy_url"><%= shortened_url.short_url %></td>
+        <td><button class="btn btn-primary btn-sm" id="copyLink">Copy</button></td>
         <td><%= link_to 'Destroy', shortened_url, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-secondary btn-sm"%></td>
       </tr>
     <% end %>
