@@ -14,5 +14,13 @@
   "version": "0.1.0",
   "devDependencies": {
     "webpack-dev-server": "^3.10.2"
+  },
+
+  "engines": {
+    "node": "12.5.0",
+    "npm": "6.9.0"
+  },
+  "scripts": {
+    "postinstall": "webpack"
   }
 }
