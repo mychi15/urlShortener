@@ -23,4 +23,12 @@ function copyLink(){
   var urlLink = document.getElementById(url-link);
   var range = document.createRange().selectNodeContents(urlLink);
   var selection = window.getSelection().addRange(range);
+
+  try {
+    var success = document.execCommand('copy');
+  } catch(err){
+    alert('Oops unable to copy');
+  }
+
+  window.getSelection().removeAllRanges();
 }

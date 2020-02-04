@@ -1,5 +1,4 @@
 class ShortenedUrlsController < ApplicationController
-  before_action :set_shortened_url, only: [:show, :edit, :update, :destroy]
 
   # GET /shortened_urls
   def index
@@ -8,6 +7,7 @@ class ShortenedUrlsController < ApplicationController
 
   # GET /shortened_urls/1
   def show
+    @shortened_url = ShortenedUrl.find_by(short_url: params[:short_url])
   end
 
   # GET /shortened_urls/new
