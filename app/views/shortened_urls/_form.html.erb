@@ -1,0 +1,22 @@
+<%= form_with(model: @shortened_url, local: true) do |form| %>
+  <% if shortened_url.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(shortened_url.errors.count, "error") %> prohibited this shortened_url from being saved:</h2>
+
+      <ul>
+        <% shortened_url.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <%= form.text_field :long_url,  placeholder: "Enter Long URL here", class: "form-control" %>
+      <div class="input-group-append">
+        <%= form.submit nil, class: "btn btn-outline-secondary", id: "button-addon2" %>
+      </div>
+    </div>
+  </div>
+<% end %>
