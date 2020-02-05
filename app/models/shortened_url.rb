@@ -1,14 +1,13 @@
 class ShortenedUrl < ApplicationRecord
   validates :long_url , presence: true
 
-  def self.create_short_url(long_url)
-    "https://#{ShortenedUrl.random_code}"
-  end
+  default_scope -> { order(created_at: :desc) }
+  paginates_per 5
 
-  def self.random_code
+  def self.generate_token
     loop do
-      random_code = SecureRandom.urlsafe_base64(6)
-      return random_code unless ShortenedUrl.exists?(short_url: random_code)
+      new_token = SecureRandom.hex(3)
+      return new_token unless ShortenedUrl.exists?(token: new_token)
     end
   end
 end

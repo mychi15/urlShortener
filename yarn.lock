@@ -4418,6 +4418,11 @@ multicast-dns@^6.0.1:
     dns-packet "^1.3.1"
     thunky "^1.0.2"
 
+n@^6.2.0:
+  version "6.2.0"
+  resolved "https://registry.yarnpkg.com/n/-/n-6.2.0.tgz#27c4aa1ac1d8a84c3a889e1a496ad3bbd7cf4e64"
+  integrity sha512-UgMUiCdm/W2UgseGQvIgChg8U/uvhVgUQbcPaG53Q/+ETY2G27V9tjDrGGB+Kr9y9cN6Oo5j6zFUzT1E9H/1rg==
+
 nan@^2.12.1, nan@^2.13.2:
   version "2.14.0"
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.14.0.tgz#7818f722027b2459a86f0295d434d1fc2336c52c"
@@ -4454,6 +4459,11 @@ nice-try@^1.0.4:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/nice-try/-/nice-try-1.0.5.tgz#a3378a7696ce7d223e88fc9b764bd7ef1089e366"
   integrity sha512-1nh45deeb5olNY7eX82BkPO7SSxR5SSYJiPTrTdFUVYwAl8CKMA5N9PjTYkHiRjisVcxcQ1HXdLhx2qxxJzLNQ==
+
+node-bin-setup@^1.0.0:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/node-bin-setup/-/node-bin-setup-1.0.6.tgz#4b5c9bb937ece702d7069b36ca78af4684677528"
+  integrity sha512-uPIxXNis1CRbv1DwqAxkgBk5NFV3s7cMN/Gf556jSw6jBvV7ca4F9lRL/8cALcZecRibeqU+5dFYqFFmzv5a0Q==
 
 node-forge@0.9.0:
   version "0.9.0"
@@ -4536,6 +4546,13 @@ node-sass@^4.13.0:
     sass-graph "^2.2.4"
     stdout-stream "^1.4.0"
     "true-case-path" "^1.0.2"
+
+node@^13.7.0:
+  version "13.7.0"
+  resolved "https://registry.yarnpkg.com/node/-/node-13.7.0.tgz#222fd622b9bfc2570625ee8151b54a0d611574e1"
+  integrity sha512-HS7bU1UEUQ8d7auEX6mRgI0fpJ6xF9aM5HELOnLgVVPaDtroC2fy4+ScYxzF1RRNMpZL9k5d7NLF9Yf9zGewAw==
+  dependencies:
+    node-bin-setup "^1.0.0"
 
 "nopt@2 || 3":
   version "3.0.6"

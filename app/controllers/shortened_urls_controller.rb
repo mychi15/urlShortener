@@ -2,24 +2,24 @@ class ShortenedUrlsController < ApplicationController
 
   # GET /shortened_urls
   def index
-    @shortened_urls = ShortenedUrl.all
+    @shortened_urls = ShortenedUrl.page(params[:page])
   end
 
   # GET /shortened_urls/1
   def show
-    @shortened_url = ShortenedUrl.find_by(short_url: params[:short_url])
+    @shortened_url = ShortenedUrl.find(params[:id])
   end
 
   # GET /shortened_urls/new
   def new
     @shortened_url = ShortenedUrl.new
-    @shortened_urls = ShortenedUrl.all
+    @shortened_urls = ShortenedUrl.page(params[:id])
   end
 
   # POST /shortened_urls
   def create
     @shortened_url = ShortenedUrl.new(shortened_url_params)
-    @shortened_url.short_url = ShortenedUrl.create_short_url(shortened_url_params)
+    @shortened_url.token = ShortenedUrl.generate_token
 
     if @shortened_url.save
       redirect_to @shortened_url, notice: 'Shortened url was successfully created.'
@@ -34,14 +34,14 @@ class ShortenedUrlsController < ApplicationController
     redirect_to new_shortened_url_url, notice: 'Shortened url was successfully destroyed.'
   end
 
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_shortened_url
-      @shortened_url = ShortenedUrl.find(params[:id])
-    end
+  def go_to_long_url
+    @shortened_url = ShortenedUrl.find_by(token: params[:token])
+    redirect_to @shortened_url.long_url
+  end
 
+  private
     # Never trust parameters from the scary internet, only allow the white list through.
     def shortened_url_params
-      params.require(:shortened_url).permit(:long_url, :short_url)
+      params.require(:shortened_url).permit(:long_url)
     end
 end
