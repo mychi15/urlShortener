@@ -8,14 +8,16 @@
     "@rails/webpacker": "4.2.2",
     "bootstrap": "4.3.1",
     "jquery": "^3.4.1",
+    "n": "^6.2.0",
+    "node": "^13.7.0",
     "popper.js": "^1.16.1",
+    "stable": "^0.1.8",
     "turbolinks": "^5.2.0"
   },
   "version": "0.1.0",
   "devDependencies": {
     "webpack-dev-server": "^3.10.2"
   },
-
   "engines": {
     "node": "12.5.0",
     "npm": "6.9.0"
