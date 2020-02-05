@@ -23,6 +23,8 @@
     "npm": "6.9.0"
   },
   "scripts": {
-    "postinstall": "webpack"
+    "postinstall": "webpack",
+    "start": "webpack-dev-server --open --mode development",
+    "build": "webpack --mode production"
   }
 }
