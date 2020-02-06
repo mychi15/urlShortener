@@ -30,6 +30,7 @@ class ShortenedUrlsController < ApplicationController
 
   # DELETE /shortened_urls/1
   def destroy
+    @shortened_url = ShortenedUrl.find(params[:id])
     @shortened_url.destroy
     redirect_to new_shortened_url_url, notice: 'Shortened url was successfully destroyed.'
   end

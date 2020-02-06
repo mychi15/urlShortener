@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 2020_02_04_071915) do
     t.string "token"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["token"], name: "index_shortened_urls_on_token", unique: true
   end
 
 end

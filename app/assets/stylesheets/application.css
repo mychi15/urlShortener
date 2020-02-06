@@ -37,3 +37,7 @@ h1 {
   background-color: #24336A;
   border-color: #24336A;
 }
+
+.long_url {
+  word-break: break-word;
+}

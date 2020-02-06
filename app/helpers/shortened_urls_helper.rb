@@ -1,3 +1,5 @@
 module ShortenedUrlsHelper
-  "http://#{domain}/#{record.token}"
+  def short_url(record)
+    "http://#{domain}/#{record.token}"
+  end
 end

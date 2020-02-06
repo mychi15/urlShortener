@@ -1,5 +1,6 @@
 class ShortenedUrl < ApplicationRecord
   validates :long_url , presence: true
+  validates :token, uniqueness: true
 
   default_scope -> { order(created_at: :desc) }
   paginates_per 5
