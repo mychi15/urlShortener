@@ -6,11 +6,12 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_tag "copy()" %>
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container my-5">
+      <%= yield %>
+    </div>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </body>
 </html>
