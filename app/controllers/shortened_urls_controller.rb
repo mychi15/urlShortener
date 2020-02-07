@@ -1,10 +1,4 @@
 class ShortenedUrlsController < ApplicationController
-
-  # GET /shortened_urls
-  def index
-    @shortened_urls = ShortenedUrl.page(params[:page])
-  end
-
   # GET /shortened_urls/1
   def show
     @shortened_url = ShortenedUrl.find(params[:id])
